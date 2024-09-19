@@ -24,7 +24,7 @@ const score:number = 0;
 // Step 5: Use an 'if' statement to check if 'score' has a value.
 //     Display 'Score is available.' if 'score' has a value other than 0.
 
-if(score!==null){
+if(true){
     console.log("Step 5 Result: " + "Score is available.");
 }
 
@@ -37,6 +37,7 @@ if(score===0){
 else{
     console.log("Score is evaluated to falsy")
 }
+
 
 //     Step 7: Declare a variable named 'username' of type 'string' and assign it the value '' (empty string).
 const username:string = "";
@@ -90,3 +91,33 @@ if(isAdmin===false){
 else{
     console.log("isAdmin is true.")
 }
+console.log("\n---------------------------------------------------------")
+
+// Step 1: Create an array of numbers. Use the '.map' function to double all the numbers in the array.
+const numberArray: number[] = [5,3,3,5,6,7,10];
+
+let mappedNumberArray : number[] = numberArray.map(x => x*2);
+console.log(mappedNumberArray);
+
+// Step 2: Create an array of words. Use the '.filter' function to select only the words that are longer than 5 letters.
+const wordsArray: string[] = ["dog", "walk", "train", "eat", "guitar"];
+
+let filteredWordsArray: string[] = wordsArray.filter(x => x.length>5);
+console.log(filteredWordsArray);
+
+// Step 3: Create an array of numbers. Use the '.reduce' function to calculate the sum of all the numbers in the array.
+const numArray: number[] = [5,10,15,20,30,50];
+
+/*acc is the value from the previous iteration
+* curr is the array item in the current iteration
+* 0 is the initial value which we want to start with*/
+let reducedNum: number = numArray.reduce((acc, curr) => acc+curr,0);
+console.log(reducedNum);
+
+// Step 4: Create an array of numbers. Use the '.some' function to check if at least one number is greater than 10.
+const numsArray: number[] = [12,45,32,56,787,23,12];
+
+/*The some() method checks if at least one element in the array passes a criteria defined by the function*/
+let someNumsArray: boolean = numsArray.some(x => x>10);
+console.log(someNumsArray);
+
